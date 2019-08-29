@@ -1,6 +1,6 @@
 {
-  "name": "responsive-tile-grid-example",
-  "homepage": "https://SkinnyPeteTheGiraffe.github.io/responsive-tile-grid",
+  "name": "react-form-ula-example",
+  "homepage": "https://SkinnyPeteTheGiraffe.github.io/react-form-ula",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "responsive-tile-grid": "link:.."
+    "react-form-ula": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",

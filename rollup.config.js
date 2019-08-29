@@ -11,6 +11,7 @@ import pkg from './package.json'
 
 export default {
   input: 'src/index.tsx',
+  external: ['styled-components'],
   output: [
     {
       file: pkg.main,
@@ -38,5 +39,6 @@ export default {
       clean: true
     }),
     commonjs()
-  ]
+  ],
+  globals: { 'styled-components': 'styled' },
 }

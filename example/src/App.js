@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'responsive-tile-grid'
+import ExampleComponent from 'react-form-ula'
 
 export default class App extends Component {
   render () {

@@ -1,4 +1,13 @@
 {
+  "lib": [
+    "es6",
+    "dom"
+  ],
+  "plugins": [
+    {
+      "name": "typescript-tslint-plugin"
+    }
+  ],
   "compilerOptions": {
     "outDir": "build",
     "module": "esnext",

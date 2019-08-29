@@ -1,10 +1,10 @@
 {
-  "name": "responsive-tile-grid",
+  "name": "react-form-ula",
   "version": "1.0.0",
-  "description": "Customizable tiles and responsive grid container React components",
-  "author": "SkinnyPeteTheGiraffe",
+  "description": "A easy to use form generation library, allowing creation of quick intuitive forms",
+  "author": "Bobby Plunkett",
   "license": "MIT",
-  "repository": "SkinnyPeteTheGiraffe/responsive-tile-grid",
+  "repository": "SkinnyPeteTheGiraffe/react-form-ula",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -21,7 +21,9 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^4.3.2"
+  },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
@@ -32,10 +34,12 @@
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "@types/styled-components": "^4.1.18",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
     "gh-pages": "^1.2.0",
+    "prettier": "^1.18.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "^2.16.0",
@@ -47,7 +51,11 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3"
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
   },
   "files": [
     "dist"
