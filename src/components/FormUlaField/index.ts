@@ -1,1 +1,1 @@
-export { FormUlaField, TextFieldProps } from './FormUlaField'
+export { FormUlaField, FormUlaFieldProps } from './FormUlaField'

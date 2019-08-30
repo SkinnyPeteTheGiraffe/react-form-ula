@@ -1,14 +1,21 @@
 import * as React from 'react';
 import {FC} from 'react';
 import styled from 'styled-components';
+import { materialUla } from './styles/materialUla';
+import {Color} from "csstype";
 
 type sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type styles = 'material:outline';
 
-export type TextFieldProps = {
+export type FormUlaFieldProps = {
   type?: string,
   name?: string,
+  backgroundColor?: Color,
+  borderColor?: Color,
   rounded?: sizes,
   sizeVariant?: sizes,
+  styleVariant?: styles,
+  placeholder?: string,
   value?: string
 }
 
@@ -54,11 +61,16 @@ const InputContainer = styled.div`
 
 const StyledInput = styled.input`
   flex-grow: 1;
-  height: ${(props: TextFieldProps) => props.sizeVariant ? getSizeVariant(props.sizeVariant) : 'auto'};
-  border-radius: ${(props: TextFieldProps) => props.rounded ? getRadiusVariant(props.rounded) : 0};
+  padding: 0.25rem 1.125rem;
+  background-color: ${(props: FormUlaFieldProps) => props.backgroundColor ? props.backgroundColor : '#e8e8e8'};
+  height: ${(props: FormUlaFieldProps) => props.sizeVariant ? getSizeVariant(props.sizeVariant) : 'auto'};
+  border-radius: ${(props: FormUlaFieldProps) => props.rounded ? getRadiusVariant(props.rounded) : 0};
+  ${(props: FormUlaFieldProps) => props.styleVariant &&
+    props.styleVariant === "material:outline" && materialUla.material.outline(props)
+  }
 `;
 
-export const FormUlaField: FC<TextFieldProps> = (props: TextFieldProps) => {
+export const FormUlaField: FC<FormUlaFieldProps> = (props: FormUlaFieldProps) => {
   return (
     <InputContainer className="form-ula-input-container">
       <StyledInput className="form-ula-input" {...props}/>

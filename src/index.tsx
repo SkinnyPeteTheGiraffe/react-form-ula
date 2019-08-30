@@ -21,8 +21,12 @@ export default class ExampleComponent extends React.Component<Props> {
           console.log('Changed Input')
         }}>
           <FormUlaRow xs={12} lg={4} flexWrap="wrap">
-            <FormUlaField name="email" type="email" rounded="xl" sizeVariant="xl" />
-            <FormUlaField name="password" type="password" />
+            <FormUlaField name="email"
+                          type="email"
+                          sizeVariant="xl"
+                          styleVariant="material:outline"
+                          placeholder="Email"/>
+            <FormUlaField name="password" type="password"/>
           </FormUlaRow>
         </FormUla>
       </div>
